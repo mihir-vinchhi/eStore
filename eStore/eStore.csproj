@@ -102,7 +102,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\app.js" />
-    <Content Include="app\services\product-service.js" />
+    <Content Include="app\services\product-catalogue-service.js" />
+    <Content Include="app\services\product-search-service.js" />
     <Content Include="app\controllers\productListCtrl.js" />
     <Content Include="app\controllers\products-ctrl.js" />
     <Content Include="app\directives\productListDirective.js" />
@@ -247,7 +248,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\ProductCatalogueController.cs" />
-    <Compile Include="Controllers\ProductCatalogueSearchController.cs" />
+    <Compile Include="Controllers\ProductSearchController.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Employee.cs" />

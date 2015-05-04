@@ -6,7 +6,7 @@ using eStore.Models;
 
 namespace eStore.Controllers
 {
-    public class ProductCatalogueSearchController : ApiController
+    public class ProductSearchController : ApiController
     {
         private readonly eStoreContext context = new eStoreContext();
 

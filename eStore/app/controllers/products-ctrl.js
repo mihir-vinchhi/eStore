@@ -2,23 +2,15 @@
 
 (function(angular) {
 
-    var productsCtrl = function ($scope, $location, $routeParams, productService) {
+    var productsCtrl = function ($scope, $location, $routeParams, productCatalogueService, productSearchService) {
 
-        var categories = [
-            {
-                id: 1,
-                name: "Beverages"
-            }, {
-                id: 2,
-                name: "Condiments"
-            }, {
-                id: 3,
-                name: "Produce"
-            }
-        ];
+        productCatalogueService.get()
+            .success(function(data) {
+                $scope.categories = data.categories;
+            });
 
         var loadProducts = function (categoryName) {
-            productService.get(categoryName)
+            productSearchService.get(categoryName)
                 .success(function(data) {
                     $scope.products = data.products;
                 });
@@ -44,13 +36,14 @@
             loadProducts($routeParams.category);
         });
 
-        $scope.categories = categories;
         $scope.loadProducts = loadProducts;
         $scope.filterProducts = filterProducts;
         $scope.categoryFilter = categoryFilter;
         $scope.clearFilter = clearFilter;
     };
+
+    productsCtrl.$inject = ["$scope", "$location", "$routeParams", "productCatalogueService", "productSearchService"];
     
-    angular.module("eStore").controller("productsCtrl", ["$scope", "$location", "$routeParams", "productService", productsCtrl]);
+    angular.module("eStore").controller("productsCtrl", productsCtrl);
 
 })(angular);
