@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="Contents/dashboard.css" rel="stylesheet" />
+</head>
+<body>
+
+<div ng-app="eStore">
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">eStore</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row" ng-view>
+        </div>
+    </div>
+
+</div>
+
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="bower_components/angular-route/angular-route.min.js"></script>
+<script src="app/app.js"></script>
+<script src="app/services/product-service.js"></script>
+<script src="app/controllers/products-ctrl.js"></script>
+
+<!--<script src="app/directives/productListDirective.js"></script>-->
+<!--<script src="app/controllers/productListCtrl.js"></script>-->
+<!--<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>-->
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+﻿
+<div class="col-sm-3 col-md-2 sidebar">
+    <h4>Categories <a href="#" ng-click="clearFilter($event)" ng-hide="categoryFilter == null">(clear)</a></h4> 
+    <ul class="nav nav-sidebar">
+        <li ng-class="{ active: categoryFilter == category.name }" ng-repeat="category in categories">
+            <a href="#" ng-click="filterProducts(category, $event)">{{category.name}}</a>
+        </li>
+    </ul>
+</div>
+
+<!--<product-list filter-by-category="{{selectedCategory}}"></product-list>-->
+
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+
+    <h4 class="page-header">Products</h4>
+
+    <table class="table table-striped">
+        <tbody>
+            <tr ng-repeat="product in products">
+                <td class="col-lg-2">
+                    <img src="Contents/no-image.jpg" class="img-responsive" alt="Generic placeholder thumbnail">
+                </td>
+                <td>
+                    <h4>{{product.name}}</h4>
+                    <h5><strong>Category: </strong>{{product.category}}</h5>
+                    <h5><strong>Supplier: </strong>{{product.supplier}}</h5>
+                    <h6><strong>Quantity Per Unit: </strong>{{product.quantityPerUnit}}</h6>
+                </td>
+                <td class="col-lg-2" style="text-align: right">
+                    <h2>&#8377; {{product.price}}</h2>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
