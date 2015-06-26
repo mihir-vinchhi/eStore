@@ -12,7 +12,7 @@ describe("product listing", function () {
 
     "use strict";
 
-    var $controller, $rootScope, $httpBackend, productsService,
+    var $controller, $rootScope, $httpBackend,
         noop = function() {};
 
     beforeEach(module("eStore"));

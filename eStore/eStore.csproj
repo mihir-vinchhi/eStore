@@ -239,7 +239,7 @@
     <Content Include="bower_components\jquery\src\wrap.js" />
     <Content Include="Global.asax" />
     <Content Include="karma.conf.js" />
-    <Content Include="test\products-ctrl-test.js" />
+    <Content Include="app\test\products-ctrl-suite.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
