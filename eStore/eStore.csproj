@@ -102,12 +102,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\app.js" />
-    <Content Include="app\services\product-catalogue-service.js" />
-    <Content Include="app\services\product-search-service.js" />
-    <Content Include="app\controllers\productListCtrl.js" />
+    <Content Include="app\services\products-service.js" />
+    <Content Include="app\services\product-list-service.js" />
     <Content Include="app\controllers\products-ctrl.js" />
     <Content Include="app\directives\productListDirective.js" />
-    <Content Include="app\views\productList.html" />
     <Content Include="app\views\products.html" />
     <Content Include="bower_components\angular-route\angular-route.js" />
     <Content Include="bower_components\angular-route\angular-route.min.js" />
@@ -247,8 +245,8 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\ProductCatalogueController.cs" />
-    <Compile Include="Controllers\ProductSearchController.cs" />
+    <Compile Include="Controllers\ProductsController.cs" />
+    <Compile Include="Controllers\ProductListController.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Employee.cs" />
@@ -266,6 +264,8 @@
     <Compile Include="Models\Supplier.cs" />
     <Compile Include="Models\sysdiagram.cs" />
     <Compile Include="Models\Territory.cs" />
+    <Compile Include="Queries\ProductListQuery.cs" />
+    <Compile Include="Queries\ProductsQuery.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />

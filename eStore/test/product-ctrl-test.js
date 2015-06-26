@@ -1,19 +1,29 @@
-﻿"use strict";
+﻿///<reference path="~/bower_components/angular/angular.js"/>
+///<reference path="~/bower_components/angular-mocks/angular-mocks.js"/>
+///<reference path="~/bower_components/angular-resource/angular-resource.js"/>
+///<reference path="~/bower_components/angular-route/angular-route.js"/>
+///<reference path="~/bower_components/angular-route/angular-route.js"/>
+///<reference path="~/app/app.js"/>
+///<reference path="~/app/services/products-service.js"/>
+///<reference path="~/app/services/product-list-service.js"/>
+///<reference path="~/app/controllers/products-ctrl.js"/>
 
 describe("product listing", function () {
 
-    var $controller, $rootScope, $httpBackend, productCatalogueService;
+    "use strict";
+
+    var $controller, $rootScope, $httpBackend, productsService;
 
     beforeEach(module("eStore"));
 
-    beforeEach(inject(function (_$controller_, _$rootScope_, _$httpBackend_, _productCatalogueService_) {
+    beforeEach(inject(function (_$controller_, _$rootScope_, _$httpBackend_, _productsService_) {
         $controller = _$controller_;
         $rootScope = _$rootScope_;
         $httpBackend = _$httpBackend_;
-        productCatalogueService = _productCatalogueService_;
+        productsService = _productsService_;
     }));
 
-    it("should fetch categories to search products", function () {
+    it("should fetch categories to filter products", function () {
         var $scope = $rootScope.$new();
 
         var categories = [
@@ -23,14 +33,14 @@ describe("product listing", function () {
         ];
 
         $httpBackend
-            .whenGET("/api/ProductCatalogue")
+            .whenGET("/api/Products")
             .respond({ categories: categories });
 
         $httpBackend
-            .whenGET("/api/ProductSearch?category=")
+            .whenGET("/api/ProductList?category=")
             .respond({ products: [] });
 
-        $controller("productsCtrl", { "$scope": $scope, "productCatalogueService": productCatalogueService });
+        $controller("productsCtrl", { "$scope": $scope, "productsService": productsService });
 
         $httpBackend.flush();
 
@@ -43,4 +53,9 @@ describe("product listing", function () {
         expect($scope.categories[2].id).toBe(3);
         expect($scope.categories[2].name).toBe("category 3");
     });
+
+    it("should ", function() {
+
+    });
+
 });

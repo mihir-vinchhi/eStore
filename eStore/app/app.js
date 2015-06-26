@@ -1,6 +1,6 @@
-﻿"use strict";
+﻿(function(angular) {
 
-(function(angular) {
+    "use strict";
 
     var module = angular.module("eStore", ["ngRoute"]);
 
