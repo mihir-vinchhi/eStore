@@ -2,7 +2,7 @@
 
     "use strict";
 
-    var productsCtrl = function ($scope, $location, $routeParams, productsService, productListService) {
+    var productsCtrl = function ($scope, $location, $routeParams, productsService, productListService, shoppingCartService) {
 
         $scope.loadProducts = function (categoryName) {
             productListService.executeQuery(categoryName)
@@ -23,6 +23,10 @@
             $scope.categoryFilter = null;
         };
 
+        $scope.addItemToCart = function (productID) {
+            shoppingCartService.addItem({ productID: productID, quantity: 1 });
+        };
+
         $scope.$on("$routeUpdate", function() {
             $scope.loadProducts($routeParams.category);
         });
@@ -37,7 +41,14 @@
         $scope.loadProducts($scope.categoryFilter);
     };
 
-    productsCtrl.$inject = ["$scope", "$location", "$routeParams", "productsService", "productListService"];
+    productsCtrl.$inject = [
+        "$scope",
+        "$location",
+        "$routeParams",
+        "productsService",
+        "productListService",
+        "shoppingCartService"
+    ];
     
     angular.module("eStore").controller("productsCtrl", productsCtrl);
 

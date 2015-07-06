@@ -2,10 +2,11 @@
 ///<reference path="~/bower_components/angular-mocks/angular-mocks.js"/>
 ///<reference path="~/bower_components/angular-resource/angular-resource.js"/>
 ///<reference path="~/bower_components/angular-route/angular-route.js"/>
-///<reference path="~/bower_components/angular-route/angular-route.js"/>
+///<reference path="~/bower_components/underscore/underscore-min.js" />
 ///<reference path="~/app/app.js"/>
 ///<reference path="~/app/services/products-service.js"/>
 ///<reference path="~/app/services/product-list-service.js"/>
+///<reference path="~/app/services/shopping-cart-service.js"/>
 ///<reference path="~/app/controllers/products-ctrl.js"/>
 
 describe("product listing", function () {

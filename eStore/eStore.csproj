@@ -102,16 +102,24 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\app.js" />
+    <Content Include="app\controllers\shopping-cart-ctrl.js" />
+    <Content Include="app\directives\shopping-cart.js" />
     <Content Include="app\services\products-service.js" />
     <Content Include="app\services\product-list-service.js" />
     <Content Include="app\controllers\products-ctrl.js" />
     <Content Include="app\directives\productListDirective.js" />
+    <Content Include="app\services\shopping-cart-service.js" />
+    <Content Include="app\test\shopping-cart-service-suite.js" />
     <Content Include="app\views\products.html" />
+    <Content Include="app\views\shopping-cart.html" />
     <Content Include="bower_components\angular-route\angular-route.js" />
     <Content Include="bower_components\angular-route\angular-route.min.js" />
     <Content Include="bower_components\angular-route\index.js" />
+    <Content Include="bower_components\underscore\underscore-min.js" />
+    <Content Include="bower_components\underscore\underscore.js" />
     <Content Include="Contents\dashboard.css" />
     <Content Include="Contents\no-image.jpg" />
+    <Content Include="Contents\site.css" />
     <Content Include="index.html" />
     <Content Include="bower_components\angular-mocks\angular-mocks.js" />
     <Content Include="bower_components\angular-mocks\ngAnimateMock.js" />
@@ -387,6 +395,11 @@
     <Content Include="bower_components\angular-route\bower.json" />
     <Content Include="bower_components\angular-route\package.json" />
     <Content Include="bower_components\angular-route\README.md" />
+    <Content Include="bower_components\underscore\.bower.json" />
+    <Content Include="bower_components\underscore\bower.json" />
+    <Content Include="bower_components\underscore\LICENSE" />
+    <Content Include="bower_components\underscore\README.md" />
+    <Content Include="bower_components\underscore\underscore-min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

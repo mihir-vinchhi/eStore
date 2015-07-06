@@ -1,0 +1,14 @@
+﻿body {
+}
+
+.shopping-cart .btn {
+    color: whitesmoke;
+}
+
+.shopping-cart .badge {
+    margin-left: -8px;
+    top: -10px;
+    padding: 2px 5px;
+    background-color: green;
+    font-size: 10px;
+}
